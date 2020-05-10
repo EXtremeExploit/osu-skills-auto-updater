@@ -8,10 +8,29 @@ var client = new banchojs.BanchoClient({
 async function Update() {
 	if (!client.isConnected())
 		await client.connect();
-	client.getUser('Tillerino').sendMessage('!u').then(() => {
-		console.log('Sent !u to Tillerino');
-	});
+	await client.getUser('Tillerino').sendMessage('!u');
+	return null;
+
 }
 
-setInterval(Update, 1800000);
+client.on("PM", (msg)=>{
+	console.log(msg.user.ircUsername+':'+msg.content);
+})
+
+let d;
+let limited = false;
+setInterval(() => {
+	d = new Date();
+	if (d.getMinutes() == 0 && d.getSeconds() == 0 && limited == false) {
+		Update().then(() => {
+			limited = true;
+			console.info('limited = false')
+		});
+	} else {
+		if (d.getMinutes == 2 && limited == true) {
+			limited = false;
+			console.info('limited = false')
+		}
+	}
+}, 500);
 Update();
