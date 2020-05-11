@@ -24,10 +24,10 @@ setInterval(() => {
 	if (d.getMinutes() == 0 && d.getSeconds() == 0 && limited == false) {
 		Update().then(() => {
 			limited = true;
-			console.info('limited = false')
+			console.info('limited = true')
 		});
 	} else {
-		if (d.getMinutes == 2 && limited == true) {
+		if (d.getMinutes() == 2 && limited == true) {
 			limited = false;
 			console.info('limited = false')
 		}
