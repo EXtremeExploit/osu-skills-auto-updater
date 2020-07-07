@@ -1,4 +1,4 @@
-# osu-skills-auto-updater
+# osutrack-autoupdater
 Auto updates your osu!skills info
 
 ## Setup
