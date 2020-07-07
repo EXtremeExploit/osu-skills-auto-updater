@@ -7,6 +7,7 @@ Auto updates your osu!skills info
 ```
 osuUsername='your osu! irc username'
 osuPassword='your osu! irc password'
+debug=false
 ```
   * You can get your osu! credentials at https://osu.ppy.sh/p/irc
 
