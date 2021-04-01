@@ -1,5 +1,5 @@
 {
-  "name": "osu-skills-auto-updater",
+  "name": "osu-track-auto-updater",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "author": "EXtremeExploit",
   "license": "MIT",
   "dependencies": {
-    "bancho.js": "^0.9.7",
-    "dotenv": "^8.2.0"
+    "node-fetch": "^2.6.1",
+    "request": "^2.88.2"
   }
 }
